@@ -1,0 +1,29 @@
+Column,Type,Category,Description
+localtime,"datetime64[ns, UTC]",Time,Timestamp of the datapoint in UTC
+symbol,object,Static,Equity symbol
+bid,float64,Quote,Bid price
+ask,float64,Quote,Ask price
+bidsize,int64,Quote,Size on the bid
+asksize,int64,Quote,Size on the ask
+mid,float64,Quote,(ask + bid) / 2
+spread,float64,Quote,(ask - bid)
+open,float64,Trade,First trade price in the time interval
+high,float64,Trade,Max trade price in the time interval
+low,float64,Trade,Min trade price in the time interval
+close,float64,Trade,Last trade price in the time interval
+volume,float64,Trade,Sum of trade sizes in the time interval
+numEvents,float64,Trade,Count of trades in the interval
+notional_volume,float64,Trade,Sum of notional trade sizes in the time interval
+volatility,float64,Static,Trailing 30 day volatility for the symbol
+avg_daily_volume,float64,Static,Trailing 30 day volume for the symbol
+avg_daily_notional,float64,Static,Trailing 30 day notional volume for the symbol
+median_daily_volume,float64,Static,Trailing 30 day volume for the symbol
+median_daily_notional,float64,Static,Trailing 30 day notional volume for the symbol
+mean_width,float64,Static,Prior tradings days mean spread
+median_width,float64,Static,Prior tradings days median spread
+median_nbbo_size,float64,Static,Prior tradings days median (bid_size + ask_size) / 2
+opening_price,float64,Static,Prior trading days opening price
+closing_price,float64,Static,Prior trading days closing price
+symbol_type,object,Static,"The type of symbol ['Common Stock', 'ADR', 'ETP', 'REIT', etc.]"
+fut_spread,float64,Target,"The spread at the end of the next time interval, what you are trying to predict"
+date,object,Time,The date
